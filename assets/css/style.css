@@ -1,0 +1,491 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  scroll-behavior: smooth;
+
+  --bg-color: #0a0120;
+  --text-color: white;
+  --h1-color: #00ffd5;
+  --header-img-gradient: linear-gradient(
+    rgba(11, 3, 54, 0.952),
+    rgba(0, 0, 0, 0.342),
+    rgba(14, 1, 48, 0.753),
+    rgb(10, 1, 32)
+  );
+  --text-shadow: 5px 5px 5px #000000;
+}
+
+body {
+  margin: 0;
+  font-family: "Raleway";
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* container starts  */
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+/* container ends  */
+
+/* Header starts */
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: var(--header-img-gradient),
+    url("../img/Captain-America-The-Winter-Soldier.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  cursor: grab;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  font-weight: 200;
+}
+
+.flex-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2em;
+}
+
+.logo {
+  border: white solid 1px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 1000;
+  padding: 0em 1em;
+}
+
+header nav ul li:first-child i {
+  background-color: #ffffff00;
+  color: white;
+}
+
+header nav ul li:first-child:hover {
+  color: white;
+}
+
+header nav ul li i {
+  font-size: 1.2rem;
+  background-color: rgb(255, 255, 255);
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  padding-top: 0.2em;
+  border-radius: 50%;
+  color: var(--bg-color);
+  margin-right: 0.5em;
+}
+
+.li-search-form {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.li-search-form button {
+  margin-right: -2.9em;
+  cursor: pointer;
+}
+.li-search-form button i {
+  background-color: #05000000;
+  color: rgba(0, 0, 0, 0.432);
+  font-size: 1.1rem;
+}
+
+.li-search-form form input {
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  border-radius: 1.5em;
+  color: #ffffff;
+  height: 3em;
+  width: 20em;
+  padding-left: 3em;
+  transition: background-color 2s;
+}
+
+header nav ul li:hover {
+  color: rgb(25, 25, 255);
+  cursor: pointer;
+}
+
+.li-search-form form input:hover {
+  background-color: rgba(255, 255, 255);
+  color: #000000;
+}
+
+.flex-header-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 1.1rem;
+  cursor: default;
+}
+
+.flex-header-text-container h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-shadow: var(--text-shadow);
+  margin-bottom: 0;
+}
+
+.flex-header-text-container p {
+  line-height: 1.5em;
+  font-weight: 100;
+}
+
+.flex-header-text-container div ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4rem;
+  text-shadow: var(--text-shadow);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.flex-header-text-container div ul li:first-child {
+  background-color: rgb(144, 144, 238);
+  padding: 0.3em 0.3em;
+  text-align: center;
+  border-radius: 1em;
+  font-weight: 500;
+}
+
+.flex-header-text-container div ul li a {
+  margin-right: 0.5em;
+}
+
+.header-flex-button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1em;
+}
+
+.header-flex-button div {
+  font-weight: 900;
+  padding: 0.5em 2.4em;
+  text-align: center;
+  cursor: pointer;
+  border: rgb(255, 255, 255) solid 1px;
+  border-radius: 20px;
+}
+
+.header-flex-button div:hover {
+  background-color: #150357;
+  border: #050114 solid 1px;
+  transition: background-color 1s;
+}
+
+.header-flex-button div i {
+  padding-right: 0.5em;
+  color: rgb(255, 0, 0);
+}
+/* Header ends  */
+
+/*  Section title movies starts  */
+
+.flex-container-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5em;
+  gap: 0.5em;
+}
+
+.flex-container-title h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-right: 1em;
+}
+
+.flex-container-title span {
+  color: var(--h1-color);
+  font-size: 0.8rem;
+  border: rgb(129, 100, 255) solid 5px;
+  background-color: rgb(129, 100, 255);
+  cursor: pointer;
+}
+.flex-container-title span i {
+  margin-right: 0.5em;
+}
+/* Section title movies ends  */
+
+/* Sections movies and tv-shows style start  */
+.container-movies {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  margin: 0 auto;
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.flex-movies-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.5em;
+  margin-top: 1.5em;
+  width: 16%;
+  height: 64vh;
+  cursor: pointer;
+  border-radius: 10px;
+  transform: scale(1, 1);
+  transition: transform 2s;
+}
+.flex-movies-container:hover {
+  transform: scale(1.1, 1.1);
+  transition: transform 1s;
+  background-color: #11053d;
+  z-index: 1;
+  border: white solid 1px;
+}
+
+.img-card {
+  position: relative;
+  border-radius: 5px;
+  height: 50vh;
+  object-fit: cover;
+}
+
+.quality {
+  position: absolute;
+  color: #ffffff;
+  right: 1em;
+  top: 0.5em;
+  padding: 0.1em 0.4em;
+  font-size: 1rem;
+  font-weight: 600;
+  border: #ffffff solid 1px;
+  background-color: #050000;
+  border-radius: 3px;
+}
+
+.flex-card-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1em;
+}
+
+.flex-card-box p {
+  font-weight: 600;
+}
+
+.flex-card-box-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5em;
+}
+.flex-card-box-details span {
+  font-weight: 100;
+  font-size: 0.9rem;
+  opacity: 0.5;
+}
+
+.flex-card-box-details i {
+  font-size: 0.2rem;
+  opacity: 0.5;
+  padding: 0em 2em;
+}
+
+.flex-card-box-details span:last-child {
+  font-size: 0.6em;
+  border: white solid 1px;
+  padding: 0.2em 0.2em;
+  border-radius: 3px;
+}
+/* Section movies and tv-shows end  */
+
+/* Section tv-shows title starts  */
+.flex-container-tv {
+  display: flex;
+  width: 100%;
+  margin-top: 10em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-container-tv h2 {
+  width: 50%;
+  font-size: 2rem;
+  font-weight: 100;
+  margin-right: 1em;
+}
+
+.flex-container-tv span {
+  color: blue;
+  cursor: pointer;
+}
+.flex-container-tv i {
+  margin-left: 0.5em;
+}
+/* Section tv-show title ends  */
+
+/* footer starts */
+footer {
+  background-color: #150249;
+  width: 100%;
+  height: 50vh;
+  margin-top: 5em;
+}
+
+/* footer ends  */
+
+/* Resposive starts  */
+
+@media (min-width: 280px) {
+  .logo {
+    font-size: 0.8rem;
+  }
+  header nav ul {
+    display: none;
+  }
+  .flex-header-text-container div ul {
+    gap: 3rem;
+  }
+
+  .flex-header-text-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .flex-header-text-container p {
+    display: none;
+  }
+  .header-flex-button {
+    font-size: 0.8rem;
+  }
+  .flex-container-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .flex-container-title h2 {
+    font-size: 1.5rem;
+  }
+  .flex-movies-container {
+    width: 49%;
+  }
+  .quality {
+    font-size: 0.6rem;
+  }
+}
+
+@media (min-width: 481px) {
+  .logo {
+    font-size: 1rem;
+  }
+  .flex-movies-container {
+    width: 19%;
+  }
+  .flex-header-text-container p {
+    display: contents;
+  }
+  .container-movies {
+    justify-content: flex-start;
+
+    gap: 0.3em;
+  }
+  .flex-card-box p {
+    font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .flex-header-text-container h1 {
+    font-size: 2rem;
+  }
+  .flex-movies-container {
+    width: 24%;
+  }
+  .flex-container-title {
+    flex-direction: row;
+  }
+  header nav ul {
+    display: flex;
+    gap: 1em;
+    font-size: 0.7rem;
+  }
+  .flex-nav-container {
+    flex-direction: column;
+    gap: 2em;
+  }
+  .flex-header-text-container {
+    width: 85%;
+  }
+  .flex-card-box p {
+    font-size: 0.8rem;
+  }
+  .container-movies {
+    justify-content: space-between;
+  }
+  .quality {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .flex-header-text-container h1 {
+    font-size: 2.5rem;
+  }
+
+  header nav ul {
+    display: flex;
+    gap: 2em;
+    font-size: 1rem;
+  }
+  .flex-nav-container {
+    flex-direction: column;
+    gap: 2em;
+  }
+  .flex-card-box p {
+    font-size: 1rem;
+  }
+  .quality {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .flex-header-text-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .flex-nav-container {
+    flex-direction: row;
+    gap: 2em;
+  }
+  .header-flex-button {
+    font-size: 1rem;
+  }
+  .flex-movies-container {
+    width: 16%;
+  }
+  .container-movies {
+    justify-content: flex-start;
+
+    gap: 0.5em;
+  }
+  .flex-card-box p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Resposive ends  */
