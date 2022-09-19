@@ -1,30 +1,48 @@
-import { movies } from "./api.js";
+import { objApi } from "./api.js";
 
-// select movie container which includes image and details.
-const moviesContent = document.querySelector(".flex-movies-container");
+const render = (category, section) => {
+  // Select cards container
+  const categoryContainer = document.querySelector(`#${section}`);
+  // Loop through  imported API
+  for (let cat of category) {
+    const cardsContent = document.createElement("div");
+    cardsContent.className = "flex-movies-container";
 
-// select movie title
-const moviesTitle = document.querySelector(".flex-card-box");
+    //Create image element
+    const image = document.createElement("img");
+    image.setAttribute("src", `./assets/img/${cat.img}`);
+    image.setAttribute("alt", "poster");
+    image.className = "img-card";
 
-// select movie details.
-const movieDetails = document.querySelector(".flex-card-box-details");
+    // Create quality div tag
+    const divQulity = document.createElement("div");
+    divQulity.innerHTML = `${cat.quality}`;
+    divQulity.className = "quality";
 
-//create image element
-const image = document.createElement("img");
-image.setAttribute("src", "./assets/img/bullet-train-movie.jpg");
-image.setAttribute("alt", "poster");
-image.className = "img-card";
+    // Create cards titles
+    const categoryTitle = document.createElement("div");
+    categoryTitle.className = "flex-card-box";
+    const elementP = document.createElement("p");
 
-// create quality div tag
-const divQulity = document.createElement("div");
-divQulity.innerHTML = "HD";
-divQulity.className = "quality";
+    cat.title.length > 16
+      ? (elementP.innerHTML = `${cat.title}`.substring(0, 16) + "...")
+      : (elementP.innerHTML = `${cat.title}`);
+    // Create cards details
+    const categoryDetails = document.createElement("div");
+    categoryDetails.className = "flex-card-box-details";
+    categoryDetails.innerHTML = `<span>${cat.year}<i class='fa-solid fa-circle'></i>${cat.duration}</span>
+  <span>${cat.type}</span>`;
+    // Put all of them together
+    categoryTitle.appendChild(elementP);
+    categoryTitle.appendChild(categoryDetails);
 
-// create movie detail content
-// const elemetPTag = document.createElement("p");
-// elemetPTag.innerText = "Bullet Train";
-// moviesTitle.appendChild(elemetPTag);
+    categoryContainer.appendChild(cardsContent);
+    cardsContent.appendChild(image);
+    cardsContent.appendChild(divQulity);
+    cardsContent.appendChild(categoryTitle);
+  }
+};
 
-moviesContent.appendChild(image);
-moviesContent.appendChild(divQulity);
-// moviesContent.appendChild(moviesTitle);
+render(objApi.movies, "movies");
+render(objApi.tv, "tv");
+render(objApi.documentary, "document");
